@@ -37,6 +37,11 @@ class linkedList{
     private function countVowels($string){
         $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
         $vowelCount = 0;
-        
+        for($i = 0; $i < strlen($string); $i++){
+            if(in_array($string[$i],$vowels)){
+                $vowelCount++;
+            }
+        }
+        return $vowelCount;
     }
 }
