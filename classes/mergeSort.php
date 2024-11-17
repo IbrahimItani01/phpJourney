@@ -47,5 +47,6 @@ function mergeSort ($array,$left,$right){
         $middle = $left + (int)(($right-$left)/2);
         mergeSort($array,$left,$middle);
         mergeSort($array,$middle+1,$right);
+        merge($array,$left,$middle,$right);
     }
 } 
