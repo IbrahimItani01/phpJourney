@@ -32,7 +32,7 @@ if (!$copy){
 else{
     if (!isset($user)) {
         // Create an initial user instance if one does not exist
-        $user = new User($name, $email, $password);
+        $user = new User($email,$password,$name);
     }
 
     // Copy the user with new values
