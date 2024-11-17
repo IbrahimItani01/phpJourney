@@ -12,3 +12,4 @@ $newName = $_POST["newName"]??"";
 $newEmail = $_POST["newEmail"]??"";
 $newPassword = $_POST["newPassword"]??"";
 
+if (!$copy){
