@@ -38,6 +38,10 @@ class User {
     }
 
     public function copy_with($name = null,$email=null, $password=null) {
-        
+        return new User (
+            $name ?? $this->name,
+            $email ?? $this->email,
+            $password ?? $this->password,
+        );
     }
 }
