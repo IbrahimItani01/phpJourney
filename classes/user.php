@@ -16,4 +16,7 @@ class User {
     private function generateId() {
         return uniqid('user_',true);
     }
+    public static function validatePassword($password) {
+        // bool to validate length
+        $validateLength = strlen($password)>=12;
 }
