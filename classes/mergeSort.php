@@ -1,5 +1,5 @@
 <?php
-function merge ($array,$left,$middle,$right){
+function merge (&$array,$left,$middle,$right){
     $lArrayLength = $middle - $left +1;
     $rArrayLength = $right - $middle;
 
@@ -42,7 +42,7 @@ function merge ($array,$left,$middle,$right){
 
 }
 
-function mergeSort ($array,$left,$right){
+function mergeSort (&$array,$left,$right){
     if($left<$right){
         $middle = $left + (int)(($right-$left)/2);
         mergeSort($array,$left,$middle);
