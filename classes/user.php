@@ -17,7 +17,6 @@ class User {
         return uniqid('user_',true);
     }
 
-    // > 2 static methods: check_password validating the password to be at least 12 characters having at least 1 uppercase, 1 lowercase and 1 special character and validate_email to validate the the email format.
     // > 1 method: copy_with taking optional parameters and returns a NEW user instance (copy) with the updated values that were passed.
     public static function validatePassword($password) {
         // bool to validate length
@@ -36,5 +35,9 @@ class User {
     public static function validateEmail($email){
         // used filter method to validate email form
         return filter_var($email, FILTER_VALIDATE_EMAIL)!=false;
+    }
+
+    public function copy_with($name = null,$email=null, $password=null) {
+        
     }
 }
