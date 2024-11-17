@@ -17,7 +17,7 @@ class linkedList{
         $this->head = null;
     }
     // add a node to the list
-    public function add($value){
+    public function addNode($value){
         $newNode = new Node( $value );
         // in case this node is first node in the list
         if($this->head === null){
@@ -33,5 +33,10 @@ class linkedList{
             $current->next = $newNode;
 
         }        
+    }
+    private function countVowels($string){
+        $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        $vowelCount = 0;
+        
     }
 }
