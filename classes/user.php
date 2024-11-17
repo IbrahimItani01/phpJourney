@@ -32,4 +32,9 @@ class User {
         // return true if all booleans are truthy
         return $validateLength && $hasUpper && $hasLower && $hasSpecial;
     }
+
+    public static function validateEmail($email){
+        // used filter method to validate email form
+        return filter_var($email, FILTER_VALIDATE_EMAIL)!=false;
+    }
 }
