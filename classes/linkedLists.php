@@ -51,6 +51,7 @@ class linkedList{
             if($this->countVowels($current->value)>=2){
 
             }
+            $current = $current->next;
         }
     }
 }
