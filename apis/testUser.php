@@ -35,6 +35,7 @@ else{
         $user = new User($name, $email, $password);
     }
 
+    // Copy the user with new values
     $copiedUser = $user->copy_with($newName, $newEmail, $newPassword);
     http_response_code(201);
     $response = [
@@ -52,3 +53,4 @@ else{
         ],
     ];
 }
+echo json_encode($response);
