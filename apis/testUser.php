@@ -34,3 +34,21 @@ else{
         // Create an initial user instance if one does not exist
         $user = new User($name, $email, $password);
     }
+
+    $copiedUser = $user->copy_with($newName, $newEmail, $newPassword);
+    http_response_code(201);
+    $response = [
+        "status" => "success",
+        "message" => "Copied user instance successfully",
+        "originalUser" => [
+            "id" => $user->id,
+            "name" => $user->name,
+            "email" => $user->email,
+        ],
+        "copiedUser" => [
+            "id" => $copiedUser->id,
+            "name" => $copiedUser->name,
+            "email" => $copiedUser->email,
+        ],
+    ];
+}
