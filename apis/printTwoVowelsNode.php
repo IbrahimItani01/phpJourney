@@ -9,3 +9,6 @@ $list = new linkedList();
 for( $i = 0; $i < count($words); $i++ ){
     $list->addNode($words[$i]);
 }
+
+$validatedNodes = $list->validateNodes();
+
