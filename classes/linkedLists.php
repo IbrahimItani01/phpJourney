@@ -13,7 +13,7 @@ class Node{
 class linkedList{
     public $head;
 
-    public function __construct($head){
+    public function __construct(){
         $this->head = null;
     }
     // add a node to the list
