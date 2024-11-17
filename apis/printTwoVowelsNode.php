@@ -12,3 +12,10 @@ for( $i = 0; $i < count($words); $i++ ){
 
 $validatedNodes = $list->validateNodes();
 
+if(count($validatedNodes) > 0){
+    http_response_code(200);
+    $response = [
+        "message"=>"validated words where found",
+        "array"=>$validatedNodes,
+    ];
+}
