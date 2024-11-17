@@ -44,4 +44,6 @@ class linkedList{
         }
         return $vowelCount;
     }
+    public function printNodesWithTwoVowels(){
+        $current = $this->head;
 }
