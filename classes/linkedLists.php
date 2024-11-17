@@ -23,6 +23,15 @@ class linkedList{
         if($this->head === null){
             $this->head = $newNode;
         }
+        else{
+            $current = $this->head;
+            // iterate till reaching end of list
+            while($current->next !== null){
+                $current = $current->next;   
+            }
+            // point the list next to the newNode
+            $current->next = $newNode;
 
+        }        
     }
 }
