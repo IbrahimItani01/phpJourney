@@ -46,4 +46,11 @@ class linkedList{
     }
     public function printNodesWithTwoVowels(){
         $current = $this->head;
+        // iterate through nodes
+        while($current !==null){
+            if($this->countVowels($current->value)>=2){
+
+            }
+        }
+    }
 }
