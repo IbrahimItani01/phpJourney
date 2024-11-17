@@ -27,6 +27,12 @@ function merge ($array,$left,$middle,$right){
         // increment the index at main array
         $k++;
     }
+    // push remaining elements in left array to main array
+    while ($i<$lArrayLength){
+        $array[$k] = $leftArray[$i];
+        $i++;
+        $k++;
+    }
 
 }
 
