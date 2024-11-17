@@ -8,9 +8,9 @@ $email = $_POST["email"];
 // boolean to check if the fetch is to copy or create new user instance
 $copy = $_POST["copy"]??false;
 // in case of copy_with
-$newName = $_POST["newName"]??"";
-$newEmail = $_POST["newEmail"]??"";
-$newPassword = $_POST["newPassword"]??"";
+$newName = $_POST["newName"]??null;
+$newEmail = $_POST["newEmail"]??null;
+$newPassword = $_POST["newPassword"]??null;
 
 if (!$copy){
     
