@@ -14,3 +14,10 @@ $newPassword = $_POST["newPassword"]??"";
 
 if (!$copy){
     if(User::validatePassword($password) && User::validateEmail($email)){
+        $user = new User($email,$password,$name);
+        http_response_code(201);
+        $response = [
+            "status"=> "success",
+            "message"=> "created user instance successfully",
+        ];
+    }else{
