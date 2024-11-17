@@ -1,5 +1,6 @@
 <?php
 
+
 include "../classes/linkedLists.php";
 
 $words = json_decode($_POST["words"]);
@@ -19,3 +20,11 @@ if(count($validatedNodes) > 0){
         "array"=>$validatedNodes,
     ];
 }
+else{
+    http_response_code(404);
+    $response=[
+        "message"=>"no validated words where found",
+        "array"=>[]
+    ];
+}
+echo json_encode($response);
