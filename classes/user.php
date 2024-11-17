@@ -21,4 +21,6 @@ class User {
         $validateLength = strlen($password)>=12;
         // check if password has an uppercase letter
         $hasUpper = preg_match('/[A-Z]/',$password);
+        // check if password has a lowercase letter
+        $hasLower = preg_match('/[a-z]/',$password);
 }
