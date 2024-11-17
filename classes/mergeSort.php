@@ -1,4 +1,5 @@
 <?php
+// O(Nlog(N)), N being the length of the input array
 function merge (&$array,$left,$middle,$right){
     $lArrayLength = $middle - $left +1;
     $rArrayLength = $right - $middle;
