@@ -19,4 +19,6 @@ class User {
     public static function validatePassword($password) {
         // bool to validate length
         $validateLength = strlen($password)>=12;
+        // check if password has an uppercase letter
+        $hasUpper = preg_match('/[A-Z]/',$password);
 }
