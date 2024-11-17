@@ -33,6 +33,12 @@ function merge ($array,$left,$middle,$right){
         $i++;
         $k++;
     }
+    // push remaining elements in right array to main array
+    while ($j<$rArrayLength){
+        $array[$k] = $rightArray[$j];
+        $j++;
+        $k++;
+    }
 
 }
 
