@@ -13,3 +13,4 @@ $newEmail = $_POST["newEmail"]??"";
 $newPassword = $_POST["newPassword"]??"";
 
 if (!$copy){
+    if(User::validatePassword($password) && User::validateEmail($email)){
