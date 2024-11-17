@@ -43,5 +43,8 @@ function merge ($array,$left,$middle,$right){
 }
 
 function mergeSort ($array,$left,$right){
-
+    if($left<$right){
+        $middle = $left + (int)(($right-$left)/2);
+        
+    }
 } 
