@@ -23,4 +23,6 @@ class User {
         $hasUpper = preg_match('/[A-Z]/',$password);
         // check if password has a lowercase letter
         $hasLower = preg_match('/[a-z]/',$password);
+        // check if password has a special character (exclude word characters and include _)
+        $hasSpecial = preg_match('/[\W_]/',$password);
 }
