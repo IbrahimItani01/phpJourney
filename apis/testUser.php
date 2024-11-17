@@ -13,6 +13,7 @@ $newEmail = $_POST["newEmail"]??"";
 $newPassword = $_POST["newPassword"]??"";
 
 if (!$copy){
+    
     if(User::validatePassword($password) && User::validateEmail($email)){
         $user = new User($email,$password,$name);
         http_response_code(201);
@@ -21,3 +22,10 @@ if (!$copy){
             "message"=> "created user instance successfully",
         ];
     }else{
+        http_response_code(400);
+        $response = [
+            "status"=> "bad request",
+            "message"=> "either email or password not validated",
+        ];
+    }
+}
